@@ -120,7 +120,7 @@ def create_trakt_list_from_file(list_file, sens_critique_url):
         return
 
     # Add source URL and last update time to the Trakt list description
-    description += f"\n\nSource URL: {source_url}\n\nThis list was last updated on {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}."
+    description += f"\n\nSource URL: {source_url}\n\nThis list was last updated on {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n(using senscritique2trakt script - https://github.com/PierreDurrr/SensCritique2Trakt)"
 
     # Check if the Trakt list already exists
     existing_list_id = find_trakt_list_id(list_name, headers)
