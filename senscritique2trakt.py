@@ -30,7 +30,7 @@ def extract_tv_show_titles(sens_critique_url):
             soup = BeautifulSoup(html_content, 'html.parser')
 
             # Find TV show titles on the current page
-            titles = soup.find_all('a', class_='sc-e6f263fc-0 sc-a0949da7-1 cTitej eGjRhz sc-4495ecbb-3 hCRsTs')
+            titles = soup.find_all('a', class_='sc-e6f263fc-0 sc-65c92dd-1 AUgeC kNIwDx sc-de228a9f-1 frtmSG sc-a46f977c-3 josfPT')
             if not titles:
                 break  # No more pages to scrape
 
@@ -68,7 +68,7 @@ def extract_list_info(url):
         list_name = soup.title.text.strip()
 
         # Extract the description
-        description_element = soup.find('div', class_='sc-9aba2448-0 elZUSK')
+        description_element = soup.find('div', class_='sc-9aba2448-0 qmLxW')
         description_text = description_element.text.strip() if description_element else ''
 
         return list_name, description_text, url  # Include the source URL
